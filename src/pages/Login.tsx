@@ -9,7 +9,7 @@ import { ErrorToast } from "../components/common/Toaster";
 // Firebase
 import { auth, googleProvider } from "../firebase/firebase"; // Adjust import as needed
 import type React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Login = () => {
 
@@ -85,6 +85,12 @@ const handleGoogleLogin = async (
     setGoogleLoading(false);
   }
 };
+
+useEffect(()=>{
+    if(Cookies.get("token")){
+        navigate("/currencies")
+    }
+},[])
 
 
     return (
