@@ -49,7 +49,6 @@ const CurrencyConverterModal: React.FC<CurrencyConverterModalProps> = ({
 }) => {
   const [currencies, setCurrencies] = useState<Currencies>({});
   const [currenciesLoading, setCurrenciesLoading] = useState<boolean>(false);
-  const [result, setResult] = useState<ConversionResult | null>(null);
   
   const [formData, setFormData] = useState<FormData>({
     amount: '',
@@ -116,7 +115,6 @@ const CurrencyConverterModal: React.FC<CurrencyConverterModalProps> = ({
         amount: parseFloat(formData.amount)
       });
 
-      setResult(response.data);
 
       if(response?.data){
         onSuccess()
@@ -148,12 +146,10 @@ const CurrencyConverterModal: React.FC<CurrencyConverterModalProps> = ({
       fromCurrency: prev.toCurrency,
       toCurrency: prev.fromCurrency
     }));
-    setResult(null);
   };
 
 
   const closeModal = (): void => {
-    setResult(null);
     setFormData({ amount: '', fromCurrency: 'USD', toCurrency: 'EUR' });
     setErrors({});
     onClose();

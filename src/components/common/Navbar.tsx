@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Cookies from 'js-cookie';
 import axios from "../../axios"
 import { ErrorToast } from './Toaster';
@@ -59,6 +59,8 @@ const Navbar = () => {
 
   
 };
+
+console.log(loading)
 
 
   return (

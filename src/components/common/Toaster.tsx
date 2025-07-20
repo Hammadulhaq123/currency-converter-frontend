@@ -1,5 +1,4 @@
 import { toast, Toaster } from "react-hot-toast";
-import type { Toast } from "react-hot-toast";
 import React from "react";
 
 // React component for the Toaster UI container

@@ -145,7 +145,7 @@ const Currencies = () => {
 
         </div>
 
-         {loading ? (
+         {statsLoading ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 mb-8 xl:grid-cols-5 gap-4">
             {Array.from({ length: 4 }).map((_, index) => (
               <ConversionSkeleton key={index} />
