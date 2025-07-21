@@ -21,7 +21,7 @@ interface Conversion {
 }
 
 const ConversionSkeleton = () => (
-  <div className="bg-white rounded-3xl shadow border p-6 animate-pulse">
+  <div className="bg-white w-full rounded-3xl shadow border p-6 animate-pulse">
     <div className="mb-4">
       <div className="h-6 bg-gray-200 rounded mb-2 w-3/4"></div>
       <div className="h-4 bg-gray-200 rounded w-full"></div>
@@ -122,7 +122,7 @@ const Currencies = () => {
   };
 
   return (
-    <section className="py-24">
+    <section className="py-24 px-4 md:px-0">
         
         <div className="mx-auto max-w-7xl flex flex-col justify-start items-end">
             
@@ -146,8 +146,8 @@ const Currencies = () => {
         </div>
 
          {statsLoading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 mb-8 xl:grid-cols-5 gap-4">
-            {Array.from({ length: 4 }).map((_, index) => (
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 mb-8 xl:grid-cols-3 gap-4">
+            {Array.from({ length: 3 }).map((_, index) => (
               <ConversionSkeleton key={index} />
             ))}
           </div>

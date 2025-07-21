@@ -64,7 +64,7 @@ console.log(loading)
 
 
   return (
-    <nav className="w-full relative h-16 flex items-center justify-start bg-white  mx-auto max-w-7xl">
+    <nav className="w-full px-4 md:px-0 relative h-16 flex items-center justify-start bg-white  mx-auto max-w-7xl">
       <div className="w-full flex  items-center justify-between ">
           <img src="/logo.png" className="h-12" alt="Logo" />
 
